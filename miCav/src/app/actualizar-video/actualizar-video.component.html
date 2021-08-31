@@ -1,0 +1,24 @@
+<div class="cuerpo">
+  <div class="row justify-content-end" style="text-align: end; margin: -1rem" >
+    <h3 [mat-dialog-close]>X</h3>
+  </div>
+
+  <h4>{{data.titulo}}</h4>
+
+  <div >
+    <div>
+      <h4>Nombre archivo</h4>
+      <input type="text" class="form-control" [ngModel]="objectConsultado.nombre" id="nameVideo" >
+    </div>
+    <br>
+    <div *ngIf="data.titulo == 'Editar video'">
+      <h4>Link Tutorial</h4>
+      <input type="text" class="form-control" [ngModel]="objectConsultado.url" id="linkVideo">
+    </div>
+  </div>
+
+  <div mat-dialog-actions class="row justify-content-end"  style="text-align: end; margin: -1rem">
+    <button class="botonesCard" mat-button [mat-dialog-close]="false">Cancelar</button>
+    <button class="botonesCard" mat-button [mat-dialog-close]="true" cdkFocusInitial>Guardar</button>
+  </div>
+</div>

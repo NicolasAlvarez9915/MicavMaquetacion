@@ -1,0 +1,8 @@
+
+  <button mat-button [matMenuTriggerFor]="menu">Centro de ayuda</button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item (click)="router.navigate(['/Tutoriales'])">Tutoriales</button>
+    <button mat-menu-item (click)="router.navigate(['/Documentos'])">Documentos</button>
+  </mat-menu>
+
+  <router-outlet></router-outlet>

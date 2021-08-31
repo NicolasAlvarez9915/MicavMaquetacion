@@ -1,0 +1,64 @@
+<div class="cuerpo">
+  <br>
+  <h1>¡Bienvenido!</h1>
+  <h4>Por favor seleccione uno de los modulos en el cual le gustaría ver los documentos</h4>
+  <div class="row justify-content-center">
+    <div class="input-icono">
+      <input type="text" name="input" >
+    </div>
+    <hr class="esconder">
+    <div style="width: 80%">
+      <mat-tab-group  class="mat-tab-group.mat-primary" [color]="'primary'"  mat-stretch-tabs>
+
+        <mat-tab label="Asistente de casos">
+          <hr class="esconder">
+          <div class="col" style="width: 97%;">
+            <div class="col row justify-content-center" style="margin-left: 5px">
+              <div class="documentoCard">
+                <div class="row">
+                  <div class="col imgDocumentoCard">
+                    <img src="../../assets/800px-PDF_file_icon.svg.png" alt="Icono no cargado" width="auto" height="100px" >
+                  </div>
+                  <div class="col row justify-content-start" style="text-align: start; margin-left: 5px">
+                    <h3>Primer documento</h3>
+                    <h3>Descripcion  del documento</h3>
+                    <div class="row justify-content-end">
+                      <button class="botonesCard" (click)="descargarDocumento({})"><fa-icon [icon]="faFileDownload"></fa-icon>Descargar</button>
+                      <button class="botonesCard" (click)="verDocumento({})"><fa-icon [icon]="faFileMedicalAlt"></fa-icon>Ver</button>
+                      <button class="botonesCard" (click)="openDialog('Editar', '1')"><fa-icon [icon]="faEdit"></fa-icon>Editar</button>
+                      <button class="botonesCard" style="color: red" (click)="openDialog('Eliminar', '1')" ><fa-icon [icon]="faTrash"></fa-icon>Eliminar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+          <hr style="visibility: hidden">
+        </mat-tab>
+        <mat-tab label="Gestión de casos">
+          <hr style="visibility: hidden">
+
+          <hr style="visibility: hidden"> </mat-tab>
+        <mat-tab label="Agenda">
+          <hr style="visibility: hidden">
+
+          <hr style="visibility: hidden"> </mat-tab>
+      </mat-tab-group>
+      <div class="" >
+        <div  class="divAddDocument">
+          <div class="row" style="margin-top: 1rem">
+            <div class="col" (click)="openDialog('Crear', 'prueba')">
+              <button type="button" class="btn btn-outline-secondary"
+                      style="border-radius: 50%;"><fa-icon [icon]="faPlus" (click)="openDialog('Crear', 'prueba')"></fa-icon></button> Agregar documento
+            </div>
+          </div>
+        </div>
+      </div>
+      <h5><span style="color: red">*</span>El archivo no debe superar el tamaño <span style="color: red">(10Mb)</span> Y el tipo especificado <span style="color: red">(Pdf)</span></h5>
+    </div>
+    <hr style="visibility: hidden">
+
+  </div>
+</div>

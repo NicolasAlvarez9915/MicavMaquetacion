@@ -1,0 +1,58 @@
+<div class="cuerpo">
+  <div class="row justify-content-end" style="text-align: end; margin: -1rem" >
+    <h3 [mat-dialog-close]>X</h3>
+  </div>
+
+  <div>
+    <h4>Nombre archivo</h4>
+    <input type="text" class="form-control" id="nameVideo" >
+  </div>
+
+  <br>
+
+  <div>
+    <h4>Descripción</h4>
+    <textarea class="form-control" id="floatingTextarea2" style="height: 100px"></textarea>
+  </div>
+
+  <br>
+
+  <h3>Usted podra editar esta información despues</h3>
+
+  <div>
+    <h4>Categoría</h4>
+    <div style="border-style: solid; border-radius: 10px; border-color: #C0C0C0; width: 100%">
+      <button class="botonesCard">Asesorias de casos</button>
+      <button class="botonesCard"><fa-icon [icon]="faPlus" style="color: #C0C0C0"></fa-icon> Agregar categoria prestablecida</button>
+      <button class="botonesCard"><fa-icon [icon]="faPlus" style="color: #C0C0C0"></fa-icon> Agregar categoria nueva</button>
+    </div>
+  </div>
+
+  <br>
+
+  <div *ngIf="data=='video'">
+    <h4 >Link Tutorial</h4>
+    <input type="text" class="form-control" id="linkVideo">
+  </div>
+
+  <br>
+
+  <input type="file" style="display: none" #inputFile (change)="capturarEvento($event)" accept="application/pdf">
+
+  <br>
+
+  <h4 *ngIf="data=='video'">Examinar archivo</h4>
+  <h4 *ngIf="data=='documento'">Adjuntar archivo</h4>
+
+  <div id="caja"  style="display: flex;align-items: center;justify-content: center;" (dragover)="permitirDrop($event)" (drop)="capturarEvento($event)" >
+    <h3  (click)="inputFile.click()">Click aquí</h3>
+  </div>
+  <h5><span style="color: red">*</span>El archivo no debe superar el tamaño <span style="color: red">(10Mb)</span> Y el tipo especificado <span style="color: red">(Pdf)</span></h5>
+
+  <br>
+
+  <div mat-dialog-actions class="row justify-content-end"  style="text-align: end; margin: -1rem">
+    <button class="botonesCard" mat-button [mat-dialog-close]="false">Cancelar</button>
+    <button class="botonesCard" mat-button [mat-dialog-close]="true" cdkFocusInitial>Guardar</button>
+  </div>
+</div>

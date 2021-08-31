@@ -1,0 +1,95 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mat-dialog-container {
+  border-bottom-right-radius: 30px !important;
+  border-top-left-radius: 30px !important;
+}
+
+.cuerpoCard{
+  box-shadow: inset 0 0 0 1000px rgba(0,0,0,.5);
+  max-width: 30vh; height: 12vh; border-radius: 10px;
+  position: relative;
+  color: white;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.cuerpoCard:before{
+  content: '' !important;
+  background-color: rgba(255, 0, 0, 0.71) !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.esconder{
+  visibility: hidden
+}
+.cdk-overlay-backdrop{
+  backdrop-filter: blur(2px);
+}
+
+
+
+
+.container-input {
+  text-align: center;
+  background: #282828;
+  border-top: 5px solid #c39f77;
+  padding: 50px 0;
+  border-radius: 6px;
+  width: 50%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.inputfile + label {
+  max-width: 80%;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+  display: inline-block;
+  overflow: hidden;
+  padding: 0.625rem 1.25rem;
+}
+
+.inputfile + label svg {
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+  fill: currentColor;
+  margin-top: -0.25em;
+  margin-right: 0.25em;
+}
+
+.iborrainputfile {
+  font-size:16px;
+  font-weight:normal;
+  font-family: 'Lato';
+}
+
+.inputfile-1 + label {
+  color: #fff;
+  background-color: #c39f77;
+}
+
+.inputfile-1:focus + label,
+.inputfile-1.has-focus + label,
+.inputfile-1 + label:hover {
+  background-color: #9f8465;
+}
+

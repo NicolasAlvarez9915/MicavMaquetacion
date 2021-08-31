@@ -1,0 +1,10 @@
+.cuerpo{
+  width: 500px;
+}
+
+.botonesCard{
+  width: max-content;
+  margin: 10px;
+  border-radius: 5px;
+  border-style: none;
+}

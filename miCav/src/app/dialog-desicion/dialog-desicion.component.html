@@ -1,0 +1,11 @@
+<body>
+<div class="row justify-content-end" style="text-align: end; margin: -1rem" >
+  <h3 [mat-dialog-close]>X</h3>
+</div>
+<h1>{{texto}} </h1>
+
+<div mat-dialog-actions>
+  <button mat-button [mat-dialog-close]="false">Cancelar</button>
+  <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Aceptar</button>
+</div>
+</body>

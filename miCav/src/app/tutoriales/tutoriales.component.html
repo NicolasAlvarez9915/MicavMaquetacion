@@ -1,0 +1,294 @@
+<div class="cuerpo">
+  <br>
+  <h1>¡Bienvenido!</h1>
+  <h4>Por favor seleccione uno de los modulos en el cual le gustaría ver o editar los videos</h4>
+  <div class="row justify-content-center">
+    <div class="input-icono">
+      <input type="text" name="input" >
+    </div>
+    <hr class="esconder">
+    <div style="width: 80%">
+      <mat-tab-group  class="mat-tab-group.mat-primary" [color]="'primary'"  mat-stretch-tabs>
+
+        <mat-tab label="Asistente de casos">
+          <hr style="visibility: hidden">
+          <div class="row" style="width: 99%">
+            <div class="col row justify-content-center">
+              <div [style]="classCss" class="cuerpoCard">
+                <div class="row" style="margin-top: .5rem">
+                  <div  class="col d-flex justify-content-start" style="margin-left: 6px; color:white;">
+                    <fa-icon [icon]="faFilm"></fa-icon> Asistente
+                  </div>
+                  <div class="col d-flex justify-content-end" style="margin-right: 6px">
+                    <fa-icon [icon]="faStar"></fa-icon>5.0
+                  </div>
+                </div>
+                <div class="row" style="margin-top: 1rem">
+                  <div class="col">
+                    <button type="button" class="btn btn-outline-light" (click)="openDialog('Eliminar', 'prueba')"
+                            style="border-radius: 50%;"><fa-icon [icon]="faTrash"></fa-icon></button>
+                  </div>
+                  <div class="col">
+                    <button type="button" class="btn btn-outline-light"
+                            style="border-radius: 50%;"><fa-icon [icon]="faPlay"></fa-icon></button>
+                  </div>
+                  <div class="col">
+                    <button type="button" class="btn btn-outline-light" (click)="openDialog('Editar', 'prueba')"
+                            style="border-radius: 50%;"><fa-icon [icon]="faPen" ></fa-icon></button>
+                  </div>
+                </div>
+              </div>
+              Pasos para la introduccion de asistente de uso
+            </div>
+            <div class="col row justify-content-center">
+              <div  style="background-color: #fdc9c9; max-width: 30vh; height: 12vh; border-radius: 10px">
+                <div class="row" style="margin-top: .5rem">
+                  <div class="col d-flex justify-content-start" style="margin-left: 6px">
+                    <fa-icon [icon]="faFilm"></fa-icon> Documentos
+                  </div>
+                  <div class="col d-flex justify-content-end" style="margin-right: 6px">
+                    <fa-icon [icon]="faStar"></fa-icon>3.0
+                  </div>
+                </div>
+
+                <div class="row" style="margin-top: 1rem">
+                  <div class="col">
+                    <button type="button" class="btn btn-outline-secondary"
+                            style="border-radius: 50%;"><fa-icon [icon]="faTrash"></fa-icon></button>
+                  </div>
+                  <div class="col">
+                    <button type="button" class="btn btn-outline-secondary"
+                            style="border-radius: 50%;"><fa-icon [icon]="faPlay"></fa-icon></button>
+                  </div>
+                  <div class="col">
+                    <button type="button" class="btn btn-outline-secondary"
+                            style="border-radius: 50%;"><fa-icon [icon]="faPen"></fa-icon></button>
+                  </div>
+                </div>
+              </div>
+              Como subir archivos al asistente de casos
+            </div>
+            <div class="col row justify-content-center">
+              <div  style="background-color: #fdc9c9; max-width: 30vh; height: 12vh; border-radius: 10px">
+                <div class="row" style="margin-top: .5rem">
+                  <div class="col d-flex justify-content-start" style="margin-left: 6px">
+                    <fa-icon [icon]="faFilm"></fa-icon> Datos
+                  </div>
+                  <div class="col d-flex justify-content-end" style="margin-right: 6px">
+                    <fa-icon [icon]="faStar"></fa-icon>4.2
+                  </div>
+                </div>
+
+                <div class="row"  style="margin-top: 1rem">
+                  <div class="col">
+                    <button type="button" class="btn btn-outline-secondary"
+                            style="border-radius: 50%;"><fa-icon [icon]="faTrash"></fa-icon></button>
+                  </div>
+                  <div class="col">
+                    <button type="button" class="btn btn-outline-secondary"
+                            style="border-radius: 50%;"><fa-icon [icon]="faPlay"></fa-icon></button>
+                  </div>
+                  <div class="col">
+                    <button type="button" class="btn btn-outline-secondary"
+                            style="border-radius: 50%;"><fa-icon [icon]="faPen"></fa-icon></button>
+                  </div>
+                </div>
+              </div>
+              Aprender a identificar datos
+            </div>
+          </div>
+          <hr style="visibility: hidden">
+        </mat-tab>
+        <mat-tab label="Gestión de casos">
+          <hr style="visibility: hidden">
+          <div class="row" style="width: 99%">
+            <div class="col row justify-content-center">
+              <div  style="background-color: #fdc9c9; max-width: 30vh; height: 12vh; border-radius: 10px">
+                <div class="row" style="margin-top: .5rem">
+                  <div class="col d-flex justify-content-start" style="margin-left: 6px">
+                    <fa-icon [icon]="faFilm"></fa-icon> Asistente
+                  </div>
+                  <div class="col d-flex justify-content-end" style="margin-right: 6px">
+                    <fa-icon [icon]="faStar"></fa-icon>5.0
+                  </div>
+                </div>
+                <div class="row" style="margin-top: 1rem">
+                  <div class="col">
+                    <button type="button" class="btn btn-outline-secondary" style="background-color: white"
+                            style="border-radius: 50%;"><fa-icon [icon]="faTrash"></fa-icon></button>
+                  </div>
+                  <div class="col">
+                    <button type="button" class="btn btn-outline-secondary"
+                            style="border-radius: 50%;"><fa-icon [icon]="faPlay"></fa-icon></button>
+                  </div>
+                  <div class="col">
+                    <button type="button" class="btn btn-outline-secondary"
+                            style="border-radius: 50%;"><fa-icon [icon]="faPen"></fa-icon></button>
+                  </div>
+                </div>
+              </div>
+              Pasos para la introduccion de asistente de uso
+            </div>
+            <div class="col row justify-content-center">
+              <div  style="background-color: #fdc9c9; max-width: 30vh; height: 12vh; border-radius: 10px">
+                <div class="row" style="margin-top: .5rem">
+                  <div class="col d-flex justify-content-start" style="margin-left: 6px">
+                    <fa-icon [icon]="faFilm"></fa-icon> Documentos
+                  </div>
+                  <div class="col d-flex justify-content-end" style="margin-right: 6px">
+                    <fa-icon [icon]="faStar"></fa-icon>3.0
+                  </div>
+                </div>
+
+                <div class="row" style="margin-top: 1rem">
+                  <div class="col">
+                    <button type="button" class="btn btn-outline-secondary"
+                            style="border-radius: 50%;"><fa-icon [icon]="faTrash"></fa-icon></button>
+                  </div>
+                  <div class="col">
+                    <button type="button" class="btn btn-outline-secondary"
+                            style="border-radius: 50%;"><fa-icon [icon]="faPlay"></fa-icon></button>
+                  </div>
+                  <div class="col">
+                    <button type="button" class="btn btn-outline-secondary"
+                            style="border-radius: 50%;"><fa-icon [icon]="faPen"></fa-icon></button>
+                  </div>
+                </div>
+              </div>
+              Como subir archivos al asistente de casos
+            </div>
+            <div class="col row justify-content-center">
+              <div  style="background-color: #fdc9c9; max-width: 30vh; height: 12vh; border-radius: 10px">
+                <div class="row" style="margin-top: .5rem">
+                  <div class="col d-flex justify-content-start" style="margin-left: 6px">
+                    <fa-icon [icon]="faFilm"></fa-icon> Datos
+                  </div>
+                  <div class="col d-flex justify-content-end" style="margin-right: 6px">
+                    <fa-icon [icon]="faStar"></fa-icon>4.2
+                  </div>
+                </div>
+
+                <div class="row"  style="margin-top: 1rem">
+                  <div class="col">
+                    <button type="button" class="btn btn-outline-secondary"
+                            style="border-radius: 50%;"><fa-icon [icon]="faTrash"></fa-icon></button>
+                  </div>
+                  <div class="col">
+                    <button type="button" class="btn btn-outline-secondary"
+                            style="border-radius: 50%;"><fa-icon [icon]="faPlay"></fa-icon></button>
+                  </div>
+                  <div class="col">
+                    <button type="button" class="btn btn-outline-secondary"
+                            style="border-radius: 50%;"><fa-icon [icon]="faPen"></fa-icon></button>
+                  </div>
+                </div>
+              </div>
+              Aprender a identificar datos
+            </div>
+          </div>
+          <hr style="visibility: hidden"> </mat-tab>
+        <mat-tab label="Agenda">
+          <hr style="visibility: hidden">
+          <div class="row" style="width: 99%">
+            <div class="col row justify-content-center">
+              <div  style="background-color: #fdc9c9; max-width: 30vh; height: 12vh; border-radius: 10px">
+                <div class="row" style="margin-top: .5rem">
+                  <div class="col d-flex justify-content-start" style="margin-left: 6px">
+                    <fa-icon [icon]="faFilm"></fa-icon> Asistente
+                  </div>
+                  <div class="col d-flex justify-content-end" style="margin-right: 6px">
+                    <fa-icon [icon]="faStar"></fa-icon>5.0
+                  </div>
+                </div>
+                <div class="row" style="margin-top: 1rem">
+                  <div class="col">
+                    <button type="button" class="btn btn-outline-secondary"
+                            style="border-radius: 50%;"><fa-icon [icon]="faTrash"></fa-icon></button>
+                  </div>
+                  <div class="col">
+                    <button type="button" class="btn btn-outline-secondary"
+                            style="border-radius: 50%;"><fa-icon [icon]="faPlay"></fa-icon></button>
+                  </div>
+                  <div class="col">
+                    <button type="button" class="btn btn-outline-secondary"
+                            style="border-radius: 50%;"><fa-icon [icon]="faPen"></fa-icon></button>
+                  </div>
+                </div>
+              </div>
+              Pasos para la introduccion de asistente de uso
+            </div>
+            <div class="col row justify-content-center">
+              <div  style="background-color: #fdc9c9; max-width: 30vh; height: 12vh; border-radius: 10px">
+                <div class="row" style="margin-top: .5rem">
+                  <div class="col d-flex justify-content-start" style="margin-left: 6px">
+                    <fa-icon [icon]="faFilm"></fa-icon> Documentos
+                  </div>
+                  <div class="col d-flex justify-content-end" style="margin-right: 6px">
+                    <fa-icon [icon]="faStar"></fa-icon>3.0
+                  </div>
+                </div>
+
+                <div class="row" style="margin-top: 1rem">
+                  <div class="col">
+                    <button type="button" class="btn btn-outline-secondary"
+                            style="border-radius: 50%;"><fa-icon [icon]="faTrash"></fa-icon></button>
+                  </div>
+                  <div class="col">
+                    <button type="button" class="btn btn-outline-secondary"
+                            style="border-radius: 50%;"><fa-icon [icon]="faPlay"></fa-icon></button>
+                  </div>
+                  <div class="col">
+                    <button type="button" class="btn btn-outline-secondary"
+                            style="border-radius: 50%;"><fa-icon [icon]="faPen"></fa-icon></button>
+                  </div>
+                </div>
+              </div>
+              Como subir archivos al asistente de casos
+            </div>
+            <div class="col row justify-content-center">
+              <div  style="background-color: #fdc9c9; max-width: 30vh; height: 12vh; border-radius: 10px">
+                <div class="row" style="margin-top: .5rem">
+                  <div class="col d-flex justify-content-start" style="margin-left: 6px">
+                    <fa-icon [icon]="faFilm"></fa-icon> Datos
+                  </div>
+                  <div class="col d-flex justify-content-end" style="margin-right: 6px">
+                    <fa-icon [icon]="faStar"></fa-icon>4.2
+                  </div>
+                </div>
+
+                <div class="row"  style="margin-top: 1rem">
+                  <div class="col">
+                    <button type="button" class="btn btn-outline-secondary"
+                            style="border-radius: 50%;"><fa-icon [icon]="faTrash"></fa-icon></button>
+                  </div>
+                  <div class="col">
+                    <button type="button" class="btn btn-outline-secondary"
+                            style="border-radius: 50%;"><fa-icon [icon]="faPlay"></fa-icon></button>
+                  </div>
+                  <div class="col">
+                    <button type="button" class="btn btn-outline-secondary"
+                            style="border-radius: 50%;"><fa-icon [icon]="faPen"></fa-icon></button>
+                  </div>
+                </div>
+              </div>
+              Aprender a identificar datos
+            </div>
+          </div>
+          <hr style="visibility: hidden"> </mat-tab>
+      </mat-tab-group>
+      <div class="" >
+        <div  class="divAddVideo">
+          <h5 style="margin-top: .5rem">Su Archivo no debe superar los 10mb permitidos</h5>
+          <div class="row" style="margin-top: 1rem">
+            <div class="col">
+              <button type="button" class="btn btn-outline-secondary"
+                      style="border-radius: 50%;"><fa-icon [icon]="faPlus" (click)="openDialog('Crear', 'prueba')"></fa-icon></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr style="visibility: hidden">
+
+  </div>
+</div>
